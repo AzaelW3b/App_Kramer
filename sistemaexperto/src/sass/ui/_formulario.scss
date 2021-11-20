@@ -1,0 +1,30 @@
+.formulario{
+    background-color: $blanco;
+    padding: 8rem;
+}
+.contenedor-pregunta{
+    label{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2.2rem;
+        color: $amarillo;
+        font-weight: bold;
+    }
+    select{
+        appearance: none;
+        padding: .8rem 2rem;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $azul;
+        outline: none;
+        background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+        background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+        font-size: 2rem;
+      
+    }
+     
+}
+.resultado p{
+    font-size: 2rem;
+}
+
