@@ -9,7 +9,7 @@ const AndroidPregunta = () => {
     return (
 
         <Fragment>
-            <label>¿Quieres que tu lenguaje de programación sea  de propósito general? que se pueda utilizar en otras áreas, aplicaciones web , aplicaciones de escritorio, etc.) </label>
+            <label>¿Quieres que tu lenguaje de programación sea  de propósito general? que se pueda utilizar en otras áreas, aplicaciones web, aplicaciones de escritorio, etc.) </label>
             <select onChange={obtenerRespuesta}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si</option>
