@@ -14,6 +14,7 @@ function App() {
   }
   return (
     <form className="formulario contenedor">
+      <h1>Sistema experto, que ruta de aprendizaje seguir</h1>
       <div className="contenedor-pregunta">
         <label>¿Qué es lo que quieres crear?</label>
         <select onChange={obtenerRespuesta}>

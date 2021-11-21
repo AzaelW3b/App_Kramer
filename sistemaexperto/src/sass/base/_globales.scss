@@ -12,6 +12,10 @@ body{
     font-family: $fuente;
     background-color: $azul;
     font-size: 1.6rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contenedor{
     margin: 0 auto;

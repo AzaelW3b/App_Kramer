@@ -1,14 +1,29 @@
 .formulario{
     background-color: $blanco;
     padding: 8rem;
+    border-radius: 1rem;
+    h1{
+        text-align: center;
+        margin-bottom: 5rem;
+        color: $azul;
+        font-size: 2rem;
+        @include adaptar(768px){
+            font-size: 3rem;
+        }
+    }
 }
 .contenedor-pregunta{
     label{
         display: block;
         margin: 2rem 0;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         color: $amarillo;
         font-weight: bold;
+        text-align: center;
+        @include adaptar(768px){
+            font-size: 2.2rem;
+            text-align: left;
+        }
     }
     select{
         appearance: none;
@@ -17,14 +32,22 @@
         border-radius: 5px;
         border: 1px solid $azul;
         outline: none;
+        font-size: 1.8rem;
         background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
         background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
-        font-size: 2rem;
+        @include adaptar(768px){
+            font-size: 2rem;
+        }
       
     }
      
 }
 .resultado p{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    @include adaptar(768px){
+        font-size: 2rem;
+        text-align: left;
+    }
 }
 
