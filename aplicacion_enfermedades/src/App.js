@@ -100,15 +100,15 @@ function App() {
       {
         (edad === 'mayorEdad' || edad === 'joven' || edad === 'adulto') && diabetes === 'siDiabetes' && hipertension === 'siHipertension' && infarto === 'noInfarto' &&
           fumar === 'siFumar' && colesterol === 'alto' && dificultadRespirar === 'siRespirar' && fatiga === 'siFatiga' ?
-          // console.log('Diagnostico: Tiene angina de pecho estable') 
+          
           <Diagnostico descripcion='Diagnostico: Tienes angina de pecho estable, consulta tu medico'/> :
           diabetes === 'siDiabetes' && hipertension === 'siHipertension' && infarto === 'siInfarto' &&
           fumar === 'siFumar' && (colesterol === 'muyalto' || colesterol === 'alto') && (dificultadRespirar === 'siRespirar' || dificultadRespirar === 'noRespirar') && fatiga === 'siFatiga' ? 
           <Diagnostico descripcion='Diagnostico: Podrias presentar un infarto agudo de miocardio, acude a tu medico de inmediato'/> :
-          // console.log('Diagnostico: Infarto agudo de miocardio') :
+   
          (diabetes === 'noDiabetes' ||  diabetes === 'siDiabetes') && hipertension === 'siHipertension' && (infarto === 'siInfarto' || infarto === 'noInfarto') &&
          (fumar === 'siFumar' ||  fumar === 'noFumar') && (colesterol === 'bajo' || colesterol === 'alto') && (dificultadRespirar === 'siRespirar' || dificultadRespirar === 'noRespirar') && ( fatiga === 'siFatiga' || fatiga === 'noFatiga') ? 
-          // console.log('Diagnostico Angina de pecho inestable') :
+
           <Diagnostico descripcion='Diagnostico: Tienes angina de pecho estable, consulta tu medico'/> :
           diabetes === 'noDiabetes' && hipertension === 'noHipertension'  && infarto === 'noInfarto' &&
           fumar === 'noFumar' && colesterol === 'bajo' && dificultadRespirar === 'noRespirar'  &&  fatiga === 'noFatiga' ?
