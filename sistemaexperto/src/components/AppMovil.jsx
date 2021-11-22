@@ -3,13 +3,11 @@ import AndroidPregunta from './RespuestasExtensas/AndroidPregunta';
 import Resultado from './Resultado';
 const AppMovil = () => {
     const [respuestamovil, guardarRespuestaMovil] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuestaMovil(e.target.value);
-      }
+  
     return (
         <Fragment>
             <label>¿Para que plataforma quieres desarrollar?</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaMovil(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="android">Android</option>
                 <option value="ios">IOS</option>

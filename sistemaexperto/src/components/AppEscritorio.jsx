@@ -3,13 +3,11 @@ import EscritorioPregunta from './RespuestasExtensas/EscritorioPregunta';
 import Resultado from './Resultado';
 const AppEscritorio = () => {
     const [resupuesescritorio, guardarRespuestaEscritorio] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuestaEscritorio(e.target.value);
-    }
+    
     return (
         <Fragment>
             <label>Te gustaria  primero crear una aplicación web y luego migrarla a escritorio o dispositivo móvil?  </label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaEscritorio(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>

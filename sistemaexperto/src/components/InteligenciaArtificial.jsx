@@ -2,13 +2,11 @@ import React, { Fragment, useState } from 'react';
 import Resultado from './Resultado';
 const InteligenciaArtificial = () => {
     const [respuestainteligencia, guardarRespuestaInteligencia] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuestaInteligencia(e.target.value);
-    }
+   
     return (
         <Fragment>
             <label>¿Qué quieres realizar?</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaInteligencia(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="analisis">Análisis estadístico y ciencia de datos en general</option>
                 <option value="automatizacion">Automatización de procesos, Data mining, redes neuronales</option>

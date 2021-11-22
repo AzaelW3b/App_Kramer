@@ -5,13 +5,11 @@ const AppWeb = () => {
 
     const [respuestaweb, guardarRespuestaWeb] = useState('');
 
-    const obtenerRespuesta = e =>{
-        guardarRespuestaWeb(e.target.value);
-    }
+ 
     return (
         <Fragment>
             <label>¿Qué tipo de página o aplicación web quieres crear?</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaWeb(e.target.value)}>
                 <option>---Selecciona una opción---</option>
                 <option value="paginasWeb">Páginas web empresariales, informativas, restaurantes, servicios, etc.</option>
                 <option value="AplicacionesWeb">Aplicaciones que hagan consulta con alguna base de datos externa y muestre la información solamente</option>

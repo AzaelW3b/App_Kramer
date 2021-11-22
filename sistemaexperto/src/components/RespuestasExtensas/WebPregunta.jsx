@@ -2,13 +2,11 @@ import React, { Fragment, useState } from 'react';
 import Resultado from '../Resultado';
 const WebPregunta = () => {
     const [respuesta, guardarRespuesta] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuesta(e.target.value);
-    }
+    
     return (
         <Fragment>
             <label>¿Las páginas o aplicaciones web quieres diseñarlas y agregarles interactividad también?</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuesta(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si, quiero diseñar mi aplicación y crear la base de datos , manipular la información y mostrar la información en la interfaz</option>
                 <option value="no">No, solo quiero crear la base de datos y manipularla con un lenguaje de programación</option>

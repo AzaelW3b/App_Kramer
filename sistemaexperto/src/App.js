@@ -9,15 +9,12 @@ function App() {
 
   const [respuesta, guardarRespuesta] = useState('');
 
-  const obtenerRespuesta = e => {
-    guardarRespuesta(e.target.value);
-  }
   return (
     <form className="formulario contenedor">
       <h1>Sistema experto, que ruta de aprendizaje seguir</h1>
       <div className="contenedor-pregunta">
         <label>¿Qué es lo que quieres crear?</label>
-        <select onChange={obtenerRespuesta}>
+        <select onChange={(e)=>guardarRespuesta(e.target.value)}>
           <option>---Selecciona una opción---</option>
           <option value="appWeb">Páginas y aplicaciones web</option>
           <option value="appMovil">Aplicaciones móviles</option>
@@ -28,7 +25,7 @@ function App() {
       </div>
       <div className="contenedor-pregunta">
         {
-          respuesta === 'appWeb' ? <AppWeb /> :
+          respuesta === 'appWeb' ? <AppWeb/> :
           respuesta === 'appMovil' ? <AppMovil /> :
           respuesta === 'appEscritorio' ? <AppEscritorio /> :
           respuesta === 'VideoJuegos' ? <VideoJuegos /> :

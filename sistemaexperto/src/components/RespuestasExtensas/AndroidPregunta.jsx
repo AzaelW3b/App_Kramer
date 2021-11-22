@@ -3,14 +3,12 @@ import Resultado from '../Resultado';
 const AndroidPregunta = () => {
 
     const [androidpregunta, guardarAndroidPregunta] = useState('');
-    const obtenerRespuesta = e => {
-        guardarAndroidPregunta(e.target.value);
-    }
+    
     return (
 
         <Fragment>
             <label>¿Quieres que tu lenguaje de programación sea  de propósito general? que se pueda utilizar en otras áreas, aplicaciones web, aplicaciones de escritorio, etc.) </label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarAndroidPregunta(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>

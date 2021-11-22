@@ -2,13 +2,11 @@ import React, { Fragment, useState } from 'react';
 import Resultado from './Resultado';
 const VideoJuegos = () => {
     const [respuestajuegos, guardarRespuestaJuegos] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuestaJuegos(e.target.value);
-    }
+    
     return (
         <Fragment>
             <label>¿Quieres crear video juegos con resultados de alto nivel, pero una  curva de aprendizaje mas compleja</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaJuegos(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>

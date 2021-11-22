@@ -2,13 +2,11 @@ import React, { Fragment, useState } from 'react';
 import Resultado from '../Resultado';
 const EscritorioPregunta = () => {
     const [respuestaescritorio, guardarRespuestaEscritorio] = useState('');
-    const obtenerRespuesta = e => {
-        guardarRespuestaEscritorio(e.target.value);
-    }
+   
     return (
         <Fragment>
             <label>¿Aparte de crear aplicaciones de escritorio te gustaria crear aplicaciones web ?</label>
-            <select onChange={obtenerRespuesta}>
+            <select onChange={(e)=>guardarRespuestaEscritorio(e.target.value)}>
                 <option>--Selecciona una opción---</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>
